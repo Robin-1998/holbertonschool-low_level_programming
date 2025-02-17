@@ -12,5 +12,5 @@ int main(void)
 
 	puts(texte);
 
-	return 0;
+	return (0);
 }
