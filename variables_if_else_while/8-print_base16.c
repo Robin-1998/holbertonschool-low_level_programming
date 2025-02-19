@@ -10,17 +10,13 @@
 
 int main(void)
 {
-	int number;
+	int numberC;
+	char numberL;
 
-	for (number = 0; number < 16; number++)
-		if (number < 10)
-		{
-			putchar(number + 0);
-		}
-		else
-		{
-			putchar(number - 10 + 'a');
-		}
+	for (numberC = 0; numberC < 10; numberC++)
+		putchar(numberC + '0');
+	for (numberL = 'a'; numberL <= 'f'; numberL++)
+		putchar(numberL);
 	putchar('\n');
 return (0);
 }
