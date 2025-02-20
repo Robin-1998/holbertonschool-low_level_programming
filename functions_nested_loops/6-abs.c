@@ -2,12 +2,19 @@
 #include <stdlib.h>
 
 /**
- * main - check the code.
- *
+ * _abs - computes the absolute value of an integer
+ * @a : value absolute
  * Return: Always 0.
  */
 
-int _abs(int)
+int _abs(int lettre)
 {
-	int
+	if (lettre >= 0)
+	{
+		return (lettre);
+	}
+	else
+	{
+		return (-lettre);
+	}
 }
