@@ -3,7 +3,7 @@
 
 /**
  * _abs - computes the absolute value of an integer
- * @a : value absolute
+ * @lettre : value absolute
  * Return: Always 0.
  */
 
