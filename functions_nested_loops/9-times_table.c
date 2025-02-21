@@ -1,0 +1,23 @@
+#include "main.h"
+
+/**
+ * times_table - computes the absolute value of an integer
+ *
+ * Return: Always 0.
+ */
+
+void times_table(void)
+{
+	int number;
+
+	for (number = 48; number < 58; number++)
+	{
+		_putchar(number);
+		if (number < 57)
+		{
+			_putchar(44);
+			_putchar(32);
+		}
+	}
+	_putchar('\n');
+}
