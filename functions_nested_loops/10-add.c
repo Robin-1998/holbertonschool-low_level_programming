@@ -2,7 +2,8 @@
 
 /**
  * add - adds two integers and returns the result.
- * @int : result
+ * @a : addition
+ * @b : addition
  * Return: Always 0.
  */
 
