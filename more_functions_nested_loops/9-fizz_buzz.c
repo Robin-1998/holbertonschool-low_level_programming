@@ -2,7 +2,7 @@
 
 /**
  * main - print the number from 1 to 100
- * 
+ *
  * Return: Always 0.
  */
 
@@ -10,22 +10,24 @@ int main(void)
 {
 	int numb;
 
-	for (numb = 1; numb <= 100; numb++)
+	printf("1");
+
+	for (numb = 2; numb <= 100; numb++)
 		if ((numb % 3 == 0) && (numb % 5 == 0))
 		{
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		}
 		else if (numb % 3 == 0)
 		{
-			printf("Fizz ");
+			printf(" Fizz");
 		}
 		else if (numb % 5 == 0)
 		{
-			printf("Buzz ");
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d ", numb);
+			printf(" %d", numb);
 		}
 	printf("\n");
 	return (0);
