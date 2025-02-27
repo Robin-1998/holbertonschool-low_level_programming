@@ -1,0 +1,20 @@
+#include "main.h"
+
+/**
+ * puts_half - prints half of a string, followed by a new line.
+ * @str : string
+ * Return: Always 0.
+ */
+
+void puts_half(char *str)
+{
+int i = 0;
+
+	while (i[str] != '\0')
+	{
+		if (i >= 5)
+		_putchar(i[str]);
+		i++;
+	}
+	_putchar('\n');
+}
