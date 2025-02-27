@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
  * puts_half - prints half of a string, followed by a new line.
@@ -8,13 +9,12 @@
 
 void puts_half(char *str)
 {
-int i = 0;
+	int i;
 
-	while (i[str] != '\0')
+	for (int i = 0; i < mid; i++)
 	{
-		if (i >= 5)
-		_putchar(i[str]);
-		i++;
+		int longueur = _strlen(str);
+		int mid = longueur / 2;
 	}
-	_putchar('\n');
+    _putchar('\n');
 }
