@@ -25,6 +25,8 @@ char *_strcpy(char *dest, char *src)
  * pointeur tableau dest
 */
 	}
+	i[dest] = '\0';
+/* le pointeur tableau dest se finira toujours pas la derniere valeur */
 	return (dest);
 /* On retourne la valeur de dest qui sera la meme que src */
 }
