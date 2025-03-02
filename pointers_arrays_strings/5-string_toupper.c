@@ -3,7 +3,7 @@
 
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase
- *
+ * @j : chaine de caractère qui va permettre d'inverser les caractère
  * Return: Always 0.
  */
 
