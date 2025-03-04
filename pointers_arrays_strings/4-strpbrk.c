@@ -2,7 +2,8 @@
 
 /**
  * rev_string  - function that prints a string, followed by a new line
- * @s : reverse
+ * @s : pointeur du premier tableau qui dans le main "hello world"
+ * @accept : pointeur du second tableau qui dans le main affiche "world"
  * Return: Always 0.
  */
 
@@ -23,7 +24,8 @@ char *_strpbrk(char *s, char *accept)
 }
 
  /*
- * tant que les caractères du pointeur tableau s ne sont pas arrivés à la fin
+ * tant que les caractères du pointeur tableau s ne sont pas arrivés à la
+ * fin
  * on incrémente et dans cette boucle ensuite on imbrique une boucle dans la
  * première avec le pointeur j qui identifiera la seconde chaîne ("world").
  * Et si le pointeur du tableau (s) est égal au deuxième pointeur du
