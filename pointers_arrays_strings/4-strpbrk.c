@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_string  - function that prints a string, followed by a new line
+ * _strpbrk - searches a string for any of a set of bytes.
  * @s : pointeur du premier tableau qui dans le main "hello world"
  * @accept : pointeur du second tableau qui dans le main affiche "world"
  * Return: Always 0.
