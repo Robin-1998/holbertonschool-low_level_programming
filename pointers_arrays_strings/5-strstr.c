@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * rev_string - function that prints a string, followed by a new line
- * @s : reverse
+ * _strstr - function qui localise une sous-chaîne
+ * @haystack : pointeur du premier tableau ("hello, world")
+ * @needle : pointeur du deuxième tableau ("world")
  * Return: Always 0.
  */
 
