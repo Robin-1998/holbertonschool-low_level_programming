@@ -6,6 +6,7 @@
  * d'une matrice carré d'entiers.
  * @a : pointeur qui va permettre de stocker la somme de deux diagonales
  * Return: Always 0.
+ * @size : correspond au ligne de notre matrice
  */
 
 void print_diagsums(int *a, int size)
@@ -20,8 +21,8 @@ void print_diagsums(int *a, int size)
 	for (j = 0; j < size; j++)
 		five_diagonale += a[(j * size) + (size - 1 - j)];
 
-	printf ("%d, ", three_diagonale);
-	printf ("%d\n", five_diagonale);
+	printf("%d, ", three_diagonale);
+	printf("%d\n", five_diagonale);
 }
 
 /*
@@ -31,11 +32,11 @@ void print_diagsums(int *a, int size)
 inférieur droit d'une matrice carré
 i * size donne l'index du début de la ligne i
 i est l'indice de la colonne sur la diagonale principale
-donc i * size + i donne l'indice exact de l'élément situé à la position (i, i)
-dans la matrice
+donc i * size + i donne l'indice exact de l'élément situé à la position
+(i, i) dans la matrice
 * la deuxième boucle, c'est la diagonale du coin supérieur droit au coin
 inférieur gauche.
 j * size va donner l'index du début de la ligne j comme pour la 1ère boucle
 et on additionne l'indice de la colonne dans la diagonale inverse pour cette
-ligne. 
+ligne.
 */
