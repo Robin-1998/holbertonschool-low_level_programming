@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - fonction qui affiche la longueur d'une chaine
- * @s : pointeur de la chaine de caractère
+ * factorial - fonction qui renvoie la factorielle d'un nombre donné
+ * @n : variable qui stocke la valeur
  * Return: Always 0.
  */
 
@@ -18,7 +18,7 @@ int factorial(int n)
 	}
 	else
 	{
-		return (n *factorial(n - 1));
+		return (n * factorial(n - 1));
 	}
 }
 /*
