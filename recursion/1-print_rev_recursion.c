@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_rev_recursionn - affiche une chaine de caractère en inverse suivi
+ * _print_rev_recursion - affiche une chaine de caractère en inverse suivi
  * d'une nouvelle ligne
  * @s : pointeur de la chaine de caractère
  */
