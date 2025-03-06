@@ -1,14 +1,22 @@
 #include<stdio.h>
 
-int main (int argc, char *argv[])
+/**
+ * main - function qui affiche le nom de notre fichier
+ * @argc : Contiens le nombre d'argument
+ * @argv : Contiens le tableau (caractère) des arguments de ligne de commande
+ * du programme
+ * Return: Always 0
+ */
+
+int main(int argc, char *argv[])
 {
 	int i;
 
 	for (i = 0; i < argc; i++)
-	  {
+	{
 		printf("%s\n", argv[i]);
-	  }
-	  return (0);
+	}
+	return (0);
 }
 
 /*
