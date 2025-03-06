@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - function qui retourne la racine carrée d'un nombre
- * @n : varible de n qui stocke la v
- * Return: Always 0.
- */
+* _sqrt_recursion - function qui retourne la racine carrée d'un nombre
+* @n : varible qui stocke notre valeur
+* Return: -1 si n est un nombre négatif.
+*/
 
- int _sqrt_recursion(int n)
+
+int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
@@ -19,6 +20,12 @@
 }
 /* Si notre valeur est un chiffre négatif on retourne -1 */
 
+/**
+* recurs2 - function qui vérifie si notre valeur est bien une racine carrée
+* @na : varible qui stocke une pseudo valeur
+* @carre : varible qui viendra appliquer la valeur d'une racine carré
+* Return: carre si c'est une racine carré,-1 si ça ne l'est pas et notre
+*/
 int recurs2(int na, int carre)
 {
 	if (carre * carre == na)
