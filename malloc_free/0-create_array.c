@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - function qui affiche le nombre d'argument suivant le nom du
- * fichier transmis
- * @argc : Contiens le nombre d'argument
- * @argv : ai censé contenir le nombre de caractère mais vu qu'on n'utilise
- * pas cette variable, on fait un (void)
- * Return: Always 0
+ * create_array - function qui créé un tableay de caracttères et
+ * l'itianlise avec un caractère spécifique
+ * @size : Variable qui peut être uniquement posifif et
+ * Contiens la taille du tableau
+ * @c : Variable de type qui contient le caractère
+ * Return: retourn Null si la taille est de 0
  */
 
 char *create_array(unsigned int size, char c)
@@ -19,9 +19,6 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 	add = malloc(sizeof(char) * size);
-
-	if (add == NULL)
-		return (NULL);
 
 	for (i = 0; i < size; i++)
 		add[i] = c;
