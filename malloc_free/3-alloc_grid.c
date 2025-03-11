@@ -27,16 +27,15 @@ int **alloc_grid(int width, int height)
 	}
 
 	/* Partie 3*/
-	tableau = (int**)malloc(sizeof(int*) * height);
+	tableau = (int **)malloc(sizeof(int *) * height);
 	if (tableau == NULL)
 		return (NULL);
-	/*if (height == 0) */
-	/* return (NULL); */
 
 	/* Partie 4 */
 	for (i = 0; i < height; i++)
 	{
 		tableau[i] = (int *)malloc(sizeof(int) * width);
+		/* Partie 4.1*/
 		if (tableau[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
@@ -46,6 +45,7 @@ int **alloc_grid(int width, int height)
 			free(tableau);
 			return (NULL);
 		}
+		/* Partie 4.2 */
 		for (j = 0; j < width; j++)
 		{
 			tableau[i][j] = 0;
@@ -67,11 +67,23 @@ si les dimensions sont vérifiés, on alloue de la mémoire à notre hauteur
 et on vérifie en cas de mauvaise allocation de mémoire.
 Cette étape est nécessaire car vous avez un tableau de "height" pointeurs,
 donc on doit allouer cette mémoire avant d'essayer d'allouer la mémoire pour
-chaque ligne idividuelle
+chaque ligne idividuelle. D'ailleurs on met int** pour caster.
 // Partie 4 //
-On initialise ensuite une boucle où on index une valeur où on
-incrémente petit à petit.
-On alloue la mémoire de notre pointeur indexé à i. Pour lui dire qu'on
-alloue de la mémoire en réservant autant d'entier qu'il y a de width sur
-la taile du pointeur (tableau[i]) et on vérifie pour évite une erreur.
+Cette boucle est utilisée pour parcourir toutes les lignes de la grille
+que nous avons allouées jusqu'à ce point. i de son côté représente
+l'index de la ligne pour laquelle l'allocation a échoué.
+donc les lignes 0 à i-1 ont été correctement allouées (avant l'échec
+de l'allocation pour la ligne i)
+// Partie 4.1 //
+Pour le free(tableau[j]), à chaque itération de la boucle, cette ligne
+libère la mémoire allouée pour la ligne tableau[j]. tableau[j] est un
+pointeur vers un tableau d'entiers, et free(tableau[j]) libère cette
+mémoire. Cela permet d'éviter les fuites de mémoires, car chaque ligne
+était allouée avec malloc.
+Ensuite on fait free(tableau) pour libérer la mémoire allouée pour le
+tableau principal (tableau). Initialisé à la ligne 30.
+// Partie 4.2 //
+Si l'allocation de mémoire pour la ligne est à l'inverse réussie, la
+fonction initialise tous les éléments de cette ligné à zéro
+dans la 2ème boucle
 */
