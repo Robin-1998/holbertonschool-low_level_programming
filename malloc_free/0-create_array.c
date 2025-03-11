@@ -28,3 +28,20 @@ char *create_array(unsigned int size, char c)
 
 	return (add);
 }
+
+/*
+* On initialise notre pointeur de type char et une variable i utilie pour
+notre futur boucle
+On vérifie que notre variable de fonction (size) est bien égale à zéro
+pour préciser au code que ce n'est pas à cette varaible que l'on veut
+allouer de la mémoire.
+Ensuite avec la commande malloc on alloue de la mémoire à notre pointeur
+add en réservant autant de caractère suivant la taille (size)
+Si l'allocation mémoire réussit, le pointeur add contient l'adresse de la
+mémoire allouée. Et si l'allocation échoue, cela retournera NULL.
+Dans la dernière partie de notre code, on boucle pour parcourir size.
+Et à chaque itération on affecte la valeur de c à l'élément add[i], en résumé
+chaque caractère du tableau sera initialisé avec la valeur de c.
+et On termine en retournant add qui pointe vers le début du tableau de
+caractères nouvellement alloué et initialisé
+*/
