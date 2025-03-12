@@ -5,7 +5,7 @@
  * _calloc - Fonction qui concatène deux chaîne de caractère
  * @nmemb : variable d'entier positif qui contient le nombre d'éléments
  * @size : variable d'entier qui contient la taille en octets
- * Return: retourn e un pointeur qui a la mémoire
+ * Return: retourne le pointeur qui a stocker la mémoire
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -29,7 +29,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	else
 	{
 		for (i = 0; i < nmemb * size; i++)
-		return (mem_array);
+		mem_array[i] = 0;
 	}
 	return (mem_array);
 }
@@ -51,7 +51,8 @@ PARTIE 5
 à l'inverse si c'est valide, on itère la taille taille totale en octets
 pour tous les éléments que l'on souhaite parcourir i < nmemb * size
 et l'on retourn notre pointeur qui contient la mémoire avec
-tous la taille totale en octets avec tout nos éléments
+la taille totale en octets avec tout nos éléments à zéro,
+ce qui permet à la mémoire d'être initialisé à zéro
 PARTIE 6
 Et on fini par retourner notre pointeur qui contient toute la mémoire
 qu'il a enmagasiné.
