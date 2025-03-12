@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * array_range - fonction qui créé un tableau d'entier
@@ -32,9 +31,11 @@ int *array_range(int min, int max)
 	}
 	else
 	{
-	for (i = min; i <= max; i++)
-		entier[k] = i;
-		k++;
+		for (i = min; i <= max; i++)
+		{
+			entier[k] = i;
+			k++;
+		}
 	}
 	return (entier);
 }
