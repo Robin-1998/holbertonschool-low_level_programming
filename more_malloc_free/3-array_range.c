@@ -28,15 +28,13 @@ int *array_range(int min, int max)
 	entier = malloc(sizeof(int) * (min + max + 1));
 	if (entier == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	else
 	{
 	for (i = min; i <= max; i++)
-		{
-			entier[k] = i;
-			k++;
-		}
+		entier[k] = i;
+		k++;
 	}
 	return (entier);
 }
@@ -47,5 +45,5 @@ On décale notre pointeur qui va stocker la mémoire du tableau d'entier
 Partie 2
 Si min est supérieur à max alors on retourne NULL
 Partie 3
-dans notre pointeur on y stocke un entier de 
+dans notre pointeur on y stocke un entier de
 */
