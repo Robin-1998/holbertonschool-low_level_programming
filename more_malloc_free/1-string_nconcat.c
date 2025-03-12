@@ -14,8 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/* PARTIE 1 */
 	char *somme;
-	unsigned int i, j, k;
-	int lenght;
+	unsigned int i, j, k, l;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -25,10 +24,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* PARTIE 2 */
 	for (i = 0; s1[i] != '\0'; i++)
 	;
-	for (lenght = 0; s2[lenght] != '\0'; lenght++)
 	;
-	for (j = 0; s2[j] != '\0' && j <= n ; j++)
+	for (j = 0; s2[j] != '\0'; j++)
 	;
+	if (j > n)
+	{
+		j = n;
+	}
 
 	/* PARTIE 3 */
 	somme = malloc(sizeof(char) * (i + j + 1));
@@ -40,29 +42,27 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		somme[k] = s1[k];
 	}
-	for (k = 0; k < j; k++)
+	for (l = 0; l < j; l++)
 	{
-		somme[i + k] = s2[k];
+		somme[k + l] = s2[l];
 	}
 	/* Partie 5 */
-	somme[i + j] = '\0';
+	somme[k + l] = '\0';
 	return (somme);
 }
 
 /*
 * // PARTIE 1 //
 On initialise notre pointeur pour qu'il stocke la concaténation des
-deux chaîens de caractères.
+deux chaîens de caractères.et nos 4 variables d'entier positifs.
 On vérifie également que si NULL est passé sur s1 et s2 on le traite
 comme un caractère vide.
 // PARTIE 2 //
 On initialise nos deux premières boucle pour calculer la longueur des deux
 chaînes. Tant que le pointeur de s1 et celui de s2 n'arrive pas à la fin
 du dernier caractère on incrémente (! = '\0')
-mais entre deux, on calcule la longueur de s2 car on rajoute dans notre code
-que si n inférieur à la longueur de s2, seule une partie de s2 est ajoutée
-et si n est plus grand ou égal à la longueur de s2, alors toute la chaîne
-s2 est ajoutée.
+Avec le if on veux copier les n charactères de s2 ou moins
+si s2 est plus court
 // PARTIE 3 //
 Ensuite, on alloue de la mémoire pour stocker la nouvelle chaîne qui
 contiendra la concaténation des deux chaînes s1 et s2.
