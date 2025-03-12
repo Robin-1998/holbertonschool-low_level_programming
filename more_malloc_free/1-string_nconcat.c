@@ -61,8 +61,12 @@ comme un caractère vide.
 On initialise nos deux premières boucle pour calculer la longueur des deux
 chaînes. Tant que le pointeur de s1 et celui de s2 n'arrive pas à la fin
 du dernier caractère on incrémente (! = '\0')
-Avec le if on veux copier les n charactères de s2 ou moins
-si s2 est plus court
+à la suite de ça une condition est indiqué pour vérifier su la valeur de
+la variable j (longeur de s2) est supérieur à la va valeur de la variable n.
+Si la condition est respecté le code réassignera la valeur de j pour qu'elle*
+soit égale à n.
+En résumé, on garantit que la valeur de j ne dépasse jamais n.
+Si j est plus grand que n, elle sera ajustée pour devenir égale à n
 // PARTIE 3 //
 Ensuite, on alloue de la mémoire pour stocker la nouvelle chaîne qui
 contiendra la concaténation des deux chaînes s1 et s2.
@@ -78,7 +82,7 @@ pointeurs dans la nouvelle chaîne.
 Dans la première boucle, on copie les caractères de 1 dans somme. La
 variable k, encore non utilisé jusque là, servira d'indice pour cette chaine
 dans la deuxième boucle, on copie les caractères de s2 dans somme
-à partir de l'indice i (qui est la fin de la portion de s1 copiée).
+à partir de l'indice l (qui est la fin de la portion de s1 copiée).
 L'indice k varie de 0 à j-1, ce qui correspond à la longueur de s2.
 // Partie 5 //
 Après avoir copié tous les caractères de 1 et s2 dans somme, on ajoute un
