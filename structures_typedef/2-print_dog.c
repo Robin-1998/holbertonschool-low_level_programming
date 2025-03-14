@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * print_dog - Affiche la fonction structure print_dog
+ * @d : pointeur qui permet de circuler dans tous les éléments de
+ * notre structure.
+ * Return: nothing.
+ */
+
 void print_dog(struct dog *d)
 {
 	/* PARTIE 1*/
@@ -34,6 +41,7 @@ void print_dog(struct dog *d)
 	{
 		printf("Owner: %s\n", d->owner);
 	}
+	return;
 }
 
 /*
