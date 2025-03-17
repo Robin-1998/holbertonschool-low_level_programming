@@ -2,11 +2,13 @@
 #include "function_pointers.h"
 
 /**
- * int_index - fonction qui retourne un nombre entier.
- * @array : un pointeur vers un tableau d'entiers
- * @size : variable en paramètre qui correspond à la taille du tableau
- * @cmp : un pointeur vers une fonction qui prend un entier en argument
+ * int_index - fonction qui retourne un nombre entier
+ * @array: un pointeur vers un tableau d'entiers
+ * @size: variable en paramètre qui correspond à la taille du tableau
+ * @cmp: un pointeur vers une fonction qui prend un entier en argument
  * et retourne un entier
+ * Return: retourne -1 si la condition est pas respecter et à l'inverse
+ * on retourne l'index
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -22,10 +24,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 	/* Partie 2 */
 	for (i = 0; i < size; i++)
 	{
-        if (cmp(array[i]) != 0)
-        {
-            return (i);
-        }
+		if (cmp(array[i]) != 0)
+		{
+			return (i);
+		}
 	}
 	return (-1);
 }
