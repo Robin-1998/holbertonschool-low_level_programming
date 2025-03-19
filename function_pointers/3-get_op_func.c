@@ -36,7 +36,9 @@ int (*get_op_func(char *s))(int, int)
 	{
 		/* Partie 1.1 */
 		if (strcmp(ops[i].op, s) == 0)
+		{
 			return (ops[i].f);
+		}
 		i++;
 	}
 	/* Partie 2 */
