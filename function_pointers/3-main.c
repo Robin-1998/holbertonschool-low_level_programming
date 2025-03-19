@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	}
 
 	/* Partie 5*/
-	if ((*argv[2] == '/' || *argv[2] == '%') && numero1 == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && numero2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
