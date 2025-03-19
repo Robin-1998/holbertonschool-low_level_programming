@@ -15,9 +15,8 @@ int main(int argc, char *argv[])
 {
 	/* Partie 1 */
 	int (*operateur)(int, int);
-	int numero1 = atoi(argv[1]);
-	int numero2 = atoi(argv[3]);
 	int resultat;
+	int numero1, numero2;
 
 	/* Partie 2 */
 	if (argc != 4)
@@ -25,6 +24,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+
+	/* Partie 1-1*/
+	numero1 = atoi(argv[1]);
+	numero2 = atoi(argv[3]);
 
 	/* Partie 3 */
 	operateur = get_op_func(argv[2]);
