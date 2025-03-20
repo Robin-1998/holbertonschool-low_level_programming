@@ -3,9 +3,11 @@
 
 /**
  * print_numbers - fonction qui affiche des nombres suivi d'un saut de ligne
- * @separator:
- * @n:
- * Return:
+ * @separator: paramètre de fonction qui correspond au caractère qui
+ * sépare les nombre
+ * @n: paramètre de fonction qui affiche la valeur total de nombres à
+ * afficher. Il détermine le nombre d'arguments supplémentaires que la
+ * fonction doit traiter
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
