@@ -10,6 +10,10 @@
  * fonction doit traiter
  */
 
+void caractere(const char c)
+{
+	
+}
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	/* Partie 1 */
@@ -25,13 +29,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/* Partie 3 */
 	va_start(argument, n);
 	for (i = 0; i < n; i++)
-	{
-		printf("%d", va_arg(argument, int));
-		if (separator != NULL && i < n - 1)
-		{
-			printf("%s", separator);
-		}
-	}
 	printf("\n");
 	va_end(argument);
 }
