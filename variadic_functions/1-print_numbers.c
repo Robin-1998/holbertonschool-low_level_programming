@@ -42,8 +42,9 @@ Vu que l'on utilise une fonction variadique on déclare notre va_list où le
 nom "argument" équivaut à notre variable d'argument.
 Note : Dans une fonction variadique, il est obligatoire de commencer
 par va_list.
-on déclare également
+on déclare également une variable d'un entier positif pour une futur boucle
 // Partie 2 //
 Si notre paramètre nommé "operator" est Null, alors on ne l'affiche pas
 // Partie 3 //
+On démarre notre fonction variadique avec va_start
 */
