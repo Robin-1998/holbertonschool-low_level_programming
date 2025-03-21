@@ -71,6 +71,7 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				symbol_type[i].print_function(argument);
 				separator = ", ";
+				break;
 			}
 			i++;
 		}
