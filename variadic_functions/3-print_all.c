@@ -40,7 +40,9 @@ void print_string(va_list argument)
 	printf("%s", stringg);
 }
 /**
- * print_all - fonction qui imprime tout (nombre + entier + caractère)
+ * print_all - fonction qui imprime tout (nombre + entier + caractère).
+ * Elle prend une liste d'arguments (ce qu'on veut afficher) et un format qui
+ * explique quel type d'arguments il faut utiliser
  * @format: paramètre de fonction qui listes les types d'arguments qui
  * sont passés dans la fonction
  */
@@ -61,6 +63,9 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(argument, format);
+	/* On s'assure que format est non num et qu'on n'a pas encore atteint
+	* la fin de la chaîne format
+	*/
 	while (format && format[b])
 	{
 		i = 0;
@@ -81,3 +86,8 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(argument);
 }
+
+/**
+ *
+ *
+ */
