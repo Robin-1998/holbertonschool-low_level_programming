@@ -31,10 +31,10 @@ size_t print_list(const list_t *h)
 
 /*
 * On initialise size_t first 0; c'est comme si on utilisais un int.
-On boucle h tant qu'il n'est pas null. (On boucle notre chaîne listée)
-	Dans la boucle ensuite si str est null on retourne "[0] (nil)\n"
-	S'il n'est pas null alors on retourne la longueur de la châine + la chaine
-	caractère
-	h = h->next permet de passer à l'élément suivant (notre noeud dans la
-	structure)
+*On boucle h tant qu'il n'est pas null. (On boucle notre chaîne listée)
+*	Dans la boucle ensuite si str est null on retourne "[0] (nil)\n"
+*	S'il n'est pas null alors on retourne la longueur de la châine + la chaine
+*	caractère
+*	h = h->next permet de passer à l'élément suivant (notre noeud dans la
+*	structure)
 */
