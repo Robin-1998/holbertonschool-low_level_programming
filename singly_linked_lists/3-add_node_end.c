@@ -32,8 +32,6 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *nouveaunoeud = malloc(sizeof(list_t));
 
-	nouveaunoeud->next = NULL;
-
 	/* vérification pour l'allocation mémoire*/
 	if (nouveaunoeud == NULL)
 	{
@@ -46,6 +44,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			return (NULL);
 		}
 	nouveaunoeud->len = _strlen(str);
+	nouveaunoeud->next = NULL;
 	if (*head == NULL)
 	{
 		*head = nouveaunoeud;
@@ -53,6 +52,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		list_t *temp = *head;
+
 
 		while (temp->next != NULL)
 		{
