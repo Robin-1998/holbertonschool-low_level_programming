@@ -44,6 +44,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			return (NULL);
 		}
 	nouveaunoeud->len = _strlen(str);
+	/* Code nécessaire pour ajouter la liste chaîné à la fin de la liste*/
 	nouveaunoeud->next = NULL;
 	if (*head == NULL)
 	{
