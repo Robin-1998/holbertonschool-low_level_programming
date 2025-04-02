@@ -9,7 +9,8 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int i =0;
+	unsigned int i = 0;
+
 	while (head && i != index)
 	{
 		i++;
@@ -19,12 +20,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 }
 
 /*
- * Tout d'abord on initialise une variable i à zéro comme dans le paramètre de
- * la fonction.
- * On boucle notre head jusquà ce qu'on atteigner notre élément de fin (1024)
- * On vérifie à chaque incrémentation de boucle que si i n'est pas égal
- * à l'index alors on continue mais si il contient le bonne index alors
- * head retournera l'élément recherché.
+ * Tout d'abord on initialise une variable i à zéro comme dans le
+ * paramètre de la fonction.
+ * On boucle notre head jusquà ce qu'on atteigner notre élément
+ * de fin (1024). On vérifie à chaque incrémentation de boucle que
+ * si i n'est pas égal à l'index alors on continue
+ * mais si il contient le bonne index alors head
+ * retournera l'élément recherché.
  * et on retourne head qui contient les éléments parcouru
  * Merci chatMackeen pour la facilité d'écriture de la boucle
 */
