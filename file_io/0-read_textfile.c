@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * read_textfile - fonction qui lit un fichier et l'imprime sur la sortie
